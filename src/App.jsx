@@ -41,7 +41,8 @@ function App() {
       const base = isTraversinng
         ? currentHistory.slice(0, currentHistory.indexOf(lastGamingState) + 1)
         : currentHistory;
-      return currentHistory.concat({
+
+      return base.concat({
         squares: nextSquareState,
         isXnext: !lastGamingState.isXnext,
       });
